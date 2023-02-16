@@ -34,7 +34,7 @@ const babel = require('gulp-babel');
 const ghPages = require('gulp-gh-pages');
 const purgecss = require('gulp-purgecss');
 const chalk = require('chalk');
-const svgSprite = require('gulp-svg-sprite');
+//(const svgSprite = require('gulp-svg-sprite');
 const log = console.log;
 
 // File paths
@@ -46,17 +46,17 @@ const files = {
 // ------------ DEVELOPMENT TASKS -------------
 
 //SVG SPRITE
-const svgSprites = () => {
-  return src('src/assets/img/svg/**.svg')
-    .pipe(svgSprite({
-      mode: {
-        stack: {
-          sprite: "../sprite.svg" //sprite file name
-        }
-      },
-    }))
-    .pipe(dest('dist/assets/img/'));
-}
+// const svgSprites = () => {
+//   return src('src/assets/img/svg/**.svg')
+//     .pipe(svgSprite({
+//       mode: {
+//         stack: {
+//           sprite: "../sprite.svg" //sprite file name
+//         }
+//       },
+//     }))
+//     .pipe(dest('dist/assets/img/'));
+// }
 
 // RESET PANINI'S CACHE OF LAYOUTS AND PARTIALS
 function resetPages(done) {
@@ -181,7 +181,7 @@ function watchFiles() {
   watch('src/assets/js/*.js', compileJS);
   watch('src/assets/img/**/*', copyImages);
   watch('src/assets/img/**/*', copyImagesMin);
-  watch('src/assets/img/svg/**.svg', svgSprites);
+  //watch('src/assets/img/svg/**.svg', svgSprites);
 }
 
 // BROWSER SYNC
@@ -355,10 +355,10 @@ function minifyCSS() {
 }
 
 // DEVELOPMENT
-exports.development = series(cleanDist, copyFont, copyImagesMin, svgSprites, compileHTML, compileSCSS, cssVendor, jsVendor, compileJS, resetPages, prettyHTML,  browserSyncInit, watchFiles);
+exports.development = series(cleanDist, copyFont, copyImagesMin, compileHTML, compileSCSS, cssVendor, jsVendor, compileJS, resetPages, prettyHTML,  browserSyncInit, watchFiles);
 
 // PRODUCTION
-exports.production = series(cleanDist, copyFont, copyImages, svgSprites, compileHTML, compileSCSS, cssVendor, purgeCSS, minifyCSS, jsVendor, concatScripts, minifyScripts, renameSources, prettyHTML, generateDocs, browserSyncInit);
+exports.production = series(cleanDist, copyFont, copyImages, compileHTML, compileSCSS, cssVendor, purgeCSS, minifyCSS, jsVendor, concatScripts, minifyScripts, renameSources, prettyHTML, generateDocs, browserSyncInit);
 
 // RUN ALL LINTERS
 exports.lint = series(htmlLint, scssLint, jsLint);

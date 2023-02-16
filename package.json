@@ -58,7 +58,7 @@
     "@fancyapps/fancybox": "^3.5.7",
     "animate.css": "^4.1.1",
     "bootstrap": "^4.6.0",
-    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svg-sprite": "^2.0.1",
     "inputmask": "^5.0.7",
     "jquery": "^3.6.0",
     "popper.js": "^1.14.7",

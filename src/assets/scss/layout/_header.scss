@@ -164,4 +164,7 @@
   position: absolute;
   top: 60px;
   right: 30px;
+  @include r(320) {
+    display: none;
+  }
 }
