@@ -65,9 +65,29 @@ ul {
   font-size: 56px;
   line-height: 66px;
   color: #bebebe;
+  @include r(375) {
+    font-size: 36px;
+  }
 }
 .title-h3 {
 
+}
+
+.caption {
+  margin-bottom: 20px;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 26px;
+  color: #00B2FF;
+}
+
+.text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 
