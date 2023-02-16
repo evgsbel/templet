@@ -221,6 +221,8 @@
 }
 .is-inner-page section {
   margin-top: 100px;
+  background-image: url('../img/inner-bg.png');
+  background-size: cover;
 }
 
 /* products */
@@ -288,5 +290,62 @@
         margin-bottom: 50px;
       }
     }
+  }
+}
+
+
+//contacts
+
+.contacts {
+  &__list {
+    justify-content: space-between;
+    margin-bottom: 60px;
+    @include r(768) {
+      flex-direction: column;
+      gap: 30px 0;
+      align-items: center;
+    }
+  }
+  &__item {
+    flex: 0 0 25%;
+  }
+  &__phone {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    width: 39px;
+    height: 39px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid #00b2ff;
+  }
+  &__phone-link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  &__email {
+    display: flex;
+    align-items: center;
+  }
+  &__email-link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    text-decoration-line: underline;
+    color: #00B2FF;
+  }
+  hr {
+    background-color: #00B2FF;
+  }
+  &__requisits {
+    margin-top: 50px;
   }
 }

@@ -12504,6 +12504,8 @@ ul {
 
 .is-inner-page section {
   margin-top: 100px;
+  background-image: url("../img/inner-bg.png");
+  background-size: cover;
 }
 
 /* products */
@@ -12582,6 +12584,80 @@ ul {
   .advantages__img:last-child {
     margin-bottom: 50px;
   }
+}
+
+.contacts__list {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 60px;
+}
+@media only screen and (max-width: 768px) {
+  .contacts__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.contacts__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+}
+.contacts__phone {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contacts__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  border: 1px solid #00b2ff;
+}
+.contacts__phone-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+}
+.contacts__email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contacts__email-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #00B2FF;
+}
+.contacts hr {
+  background-color: #00B2FF;
+}
+.contacts__requisits {
+  margin-top: 50px;
 }
 
 /*# sourceMappingURL=scss */
