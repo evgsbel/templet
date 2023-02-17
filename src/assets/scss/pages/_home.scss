@@ -96,12 +96,14 @@
       gap: 10px 0;
     }
     @include h(600) {
+      padding-top: 80px;
       flex-direction: row;
       justify-content: space-between;
       text-align: center;
       flex-wrap: wrap;
       align-items: flex-end;
       height: 100%;
+      gap: 0;
     }
     @include r(576) {
       flex-direction: row;
